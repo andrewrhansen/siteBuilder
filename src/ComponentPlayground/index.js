@@ -1,6 +1,6 @@
 import React from "react";
 
-import ChrisTest from "./card";
+import ChrisTest from "./Chris/card";
 
 import { ANDREW, CHRIS, SAM } from "../Assets/constants.js";
 
