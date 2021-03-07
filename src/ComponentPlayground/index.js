@@ -12,7 +12,7 @@ export default (props) => {
 
     switch (props.selectedUser) {
       case ANDREW:
-        component = <div>Andrew</div>;
+        component = <Header />
         break;
       case CHRIS:
         component = <ChrisTest />;
