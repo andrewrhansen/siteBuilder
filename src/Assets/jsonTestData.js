@@ -18,3 +18,14 @@ export const ChrisTestData = [
     data: {},
   },
 ];
+
+export const AndrewTestData = [
+  {
+    type: "Header",
+    data: {
+      title: "Julio's Taco Truck",
+      position: "static",
+      options:["Menu", "Location", "About Us"]
+    }
+  }
+]
