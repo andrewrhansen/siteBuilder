@@ -13,22 +13,7 @@ import MenuIcon from "@material-ui/icons/Menu";
 
 import { AndrewTestData } from "../../Assets/jsonTestData";
 
-const useStyles = makeStyles({
-  root: {
-    minWidth: 275,
-  },
-  bullet: {
-    display: "inline-block",
-    margin: "0 2px",
-    transform: "scale(0.8)",
-  },
-  title: {
-    fontSize: 14,
-  },
-  pos: {
-    marginBottom: 12,
-  },
-});
+const useStyles = makeStyles({});
 
 export default function Header() {
   const classes = useStyles();
@@ -90,7 +75,7 @@ export default function Header() {
         component = renderBar(atd);
         break;
       default:
-        component = <div>thats going to be a hard pass from me dog</div>;
+        break;
     }
 
     return component;
