@@ -1,9 +1,10 @@
 import React from "react";
 
 import ChrisTest from "./Chris/card";
-import Header from "./Andrew/header";
+import AndrewApp from "./Andrew/andrewApp";
 
 import { ANDREW, CHRIS, SAM } from "../Assets/constants.js";
+
 
 
 export default (props) => {
@@ -12,7 +13,7 @@ export default (props) => {
 
     switch (props.selectedUser) {
       case ANDREW:
-        component = <Header />
+        component = <AndrewApp />
         break;
       case CHRIS:
         component = <ChrisTest />;
