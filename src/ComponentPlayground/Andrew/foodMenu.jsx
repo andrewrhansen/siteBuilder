@@ -6,29 +6,38 @@ import { AndrewTestData } from "../../Assets/jsonTestData";
 export default function FoodMenu() {
   const useStyles = makeStyles({});
   const classes = useStyles();
+
   const renderMenu = (menu) => {
     const menuList = menu.data.menuList;
     console.log(menuList);
     return (
       <div>
-        {menuList.map((item, index) => (
+        {menuList.map((cat, index) => (
           <div className={classes.section1} key={index}>
-            <Grid container alignItems="center">
-              <Grid item xs>
-                <Typography gutterBottom variant="h5">
-                  {item.name}
-                </Typography>
-              </Grid>
-              <Grid item>
-                <Typography gutterBottom variant="h6">
-                  {item.price}
-                </Typography>
-              </Grid>
-            </Grid>
-            <Typography color="textSecondary" variant="body2">
-              {item.desc}
-            </Typography>
+            <br />
+            <br />
+            <Typography variant="h3">{cat.catName}</Typography>
             <Divider variant="middle" />
+            {cat.items.map((item, index) => (
+              <div>
+                <Grid container alignItems="center">
+                  <Grid item xs>
+                    <Typography gutterBottom variant="h5">
+                      {item.name}
+                    </Typography>
+                  </Grid>
+                  <Grid item>
+                    <Typography gutterBottom variant="h6">
+                      {item.price}
+                    </Typography>
+                  </Grid>
+                </Grid>
+                <Typography color="textSecondary" variant="body2">
+                  {item.desc}
+                </Typography>
+                <Divider variant="middle" />
+              </div>
+            ))}
           </div>
         ))}
       </div>
